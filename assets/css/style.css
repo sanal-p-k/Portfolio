@@ -1104,3 +1104,104 @@ section {
     padding-right: 20px 15px;
   }
 }
+Css
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.portfolio .portfolio-item {
+  margin-bottom: 30px;
+}
+
+.portfolio #portfolio-flters {
+  padding: 0;
+  margin: 0 auto 35px auto;
+  list-style: none;
+  text-align: center;
+  background: #fff;
+  border-radius: 50px;
+  padding: 2px 15px;
+}
+
+.portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px 8px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #272829;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+  color: #149ddd;
+}
+
+.portfolio #portfolio-flters li:last-child {
+  margin-right: 0;
+}
+/* Portfolio Item */
+.portfolio .portfolio-wrap {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  transition: 0.3s;
+}
+
+.portfolio-wrap img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Overlay Styling */
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.4); /* Lighter overlay with lower opacity */
+  color: #272829; /* Darker text for contrast */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.3s ease, background 0.3s ease;
+  text-align: center;
+}
+
+.portfolio-overlay i {
+  font-size: 28px;
+  margin-top: 8px;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-overlay .portfolio-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover Effect */
+.portfolio-wrap:hover img {
+  opacity: 0.3; /* Further dim the image on hover */
+  transform: scale(1.05); /* Slight zoom */
+}
+
+.portfolio-wrap:hover .portfolio-overlay {
+  opacity: 1; /* Show overlay on hover */
+  background: rgba(255, 255, 255, 0.6); /* Make overlay lighter on hover */
+}
+
+.portfolio-wrap:hover .portfolio-overlay i {
+  transform: scale(1.1); /* Slight zoom on the icon */
+}
+
+.portfolio-wrap:hover .portfolio-overlay .portfolio-title {
+  opacity: 1; /* Show title */
+}
